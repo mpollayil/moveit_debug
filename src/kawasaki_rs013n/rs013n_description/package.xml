@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rs013n_description</name>
+  <version>2.0.6</version>
+  <description>RS013N resources used for MoveIt planning</description>
+
+  <author email="mathew.josepollayil@yk-robotics.com">Mathew Jose Pollayil</author>
+
+  <maintainer email="mathew.josepollayil@yk-robotics.com">YK Team</maintainer>
+
+  <license>BSD</license>
+  <url type="website">http://www.yk-robotics.com</url>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <export>
+      <build_type>ament_cmake</build_type>
+  </export>
+</package>

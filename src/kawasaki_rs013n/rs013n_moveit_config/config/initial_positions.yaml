@@ -1,0 +1,9 @@
+# Default initial positions for rs013n's ros2_control fake system
+
+initial_positions:
+  _joint1: 0
+  _joint2: 0
+  _joint3: 0
+  _joint4: 0
+  _joint5: 0
+  _joint6: 0

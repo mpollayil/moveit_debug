@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/../**",
+                "/opt/ros/humble/include/**",
+                "/usr/include/eigen3",
+                "/usr/include/ignition/sdformat12",
+                "/usr/include/ignition/math6",
+                "/usr/include/ignition/utils1",
+                "/usr/include/OGRE",
+                "/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+                "/usr/include/x86_64-linux-gnu/qt5",
+                "/usr/include/x86_64-linux-gnu/qt5/QtCore",
+                "/usr/include/x86_64-linux-gnu/qt5/QtGui",
+                "/opt/ros/humble/include",
+                "/usr/include/libxml2"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
