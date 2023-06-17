@@ -102,6 +102,7 @@ int main(int argc, char **argv)
   // planning_scene_.robot_state.attached_collision_objects = attached;
 
   // move_group_node->ps_publisher->publish(planning_scene);
+  planning_scene_interface.addCollisionObjects(collision_objects);
 
   // Plan now
   moveit::planning_interface::MoveGroupInterface::Plan my_plan;
