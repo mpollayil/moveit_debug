@@ -36,8 +36,17 @@ target_include_directories(moveit_collision PUBLIC
 target_compile_features(moveit_collision PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 ament_target_dependencies(moveit_collision ${THIS_PACKAGE_INCLUDE_DEPENDS})
 
-install(TARGETS moveit_collision
-  DESTINATION lib/${PROJECT_NAME})
+install(TARGETS moveit_collision DESTINATION lib/${PROJECT_NAME})
+
+# moveit_constrained
+add_executable(moveit_constrained src/moveit_constrained.cpp)
+target_include_directories(moveit_constrained PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_features(moveit_constrained PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(moveit_constrained ${THIS_PACKAGE_INCLUDE_DEPENDS})
+
+install(TARGETS moveit_constrained DESTINATION lib/${PROJECT_NAME})
 
 # Install Folders
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})

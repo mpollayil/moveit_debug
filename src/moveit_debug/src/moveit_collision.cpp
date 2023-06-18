@@ -58,10 +58,6 @@ int main(int argc, char **argv)
   moveit::planning_interface::MoveGroupInterface move_group(move_group_node, PLANNING_GROUP);
   moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 
-  // Raw pointers are frequently used to refer to the planning group for improved performance.
-  const moveit::core::JointModelGroup *joint_model_group =
-      move_group.getCurrentState()->getJointModelGroup(PLANNING_GROUP);
-
   // Define goal pose
   geometry_msgs::msg::Pose target_pose1;
   target_pose1.orientation.w = 1.0;
@@ -103,6 +99,7 @@ int main(int argc, char **argv)
 
   // move_group_node->ps_publisher->publish(planning_scene);
   planning_scene_interface.addCollisionObjects(collision_objects);
+  sleep(1.0); // Wait for being sure planning scene published
 
   // Plan now
   moveit::planning_interface::MoveGroupInterface::Plan my_plan;
