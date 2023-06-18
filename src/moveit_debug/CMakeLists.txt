@@ -48,6 +48,16 @@ ament_target_dependencies(moveit_constrained ${THIS_PACKAGE_INCLUDE_DEPENDS})
 
 install(TARGETS moveit_constrained DESTINATION lib/${PROJECT_NAME})
 
+# moveit_orientation
+add_executable(moveit_orientation src/moveit_orientation.cpp)
+target_include_directories(moveit_orientation PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>)
+target_compile_features(moveit_orientation PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(moveit_orientation ${THIS_PACKAGE_INCLUDE_DEPENDS})
+
+install(TARGETS moveit_orientation DESTINATION lib/${PROJECT_NAME})
+
 # Install Folders
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 # install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
