@@ -95,7 +95,7 @@ int main(int argc, char **argv)
   rclcpp::Duration time_to_plan = move_group_node->get_clock()->now() - initial_time;
 
   RCLCPP_INFO(LOGGER, "Planning to pose %s", success ? "" : "FAILED");
-  RCLCPP_INFO_STREAM(LOGGER, "Planning took " << time_to_plan.nanoseconds()*1e9 << "seconds");
+  RCLCPP_INFO_STREAM(LOGGER, "Planning took " << time_to_plan.nanoseconds()*1e-9 << "seconds");
 
 
   // Publish trajectory to be executed
